@@ -8,6 +8,8 @@ export default function Header() {
         <Link href={"/about"}>About</Link>
         <Link href={"/blog/post"}>Post</Link>
         <Link href={"/playground/find-play"}>Playground</Link>
+        <Link href={"/users-client-ver"}>Users-Client</Link>
+        <Link href={"/users-server-ver"}>Users-Server</Link>
       </nav>
     </div>
   );
