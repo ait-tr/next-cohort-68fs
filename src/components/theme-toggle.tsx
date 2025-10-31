@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { Sun, Moon } from "lucide-react";
 
 export default function ThemeToggle() {
   const { setTheme, resolvedTheme } = useTheme();
@@ -21,7 +22,11 @@ export default function ThemeToggle() {
       type="button"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
-      Change theme
+      {resolvedTheme === "dark" ? (
+        <Sun className="hover:text-[#e6dca2]" />
+      ) : (
+        <Moon className="hover:text-[#e6dca2]" />
+      )}
     </button>
   );
 }
