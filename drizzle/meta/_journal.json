@@ -15,6 +15,13 @@
       "when": 1762164211913,
       "tag": "0001_nosy_bulldozer",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1762246899915,
+      "tag": "0002_long_captain_flint",
+      "breakpoints": true
     }
   ]
 }

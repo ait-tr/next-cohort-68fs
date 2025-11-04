@@ -1,4 +1,11 @@
-import { pgTable, integer, varchar } from "drizzle-orm/pg-core";
+import {
+  pgTable,
+  integer,
+  varchar,
+  boolean,
+  timestamp,
+  decimal,
+} from "drizzle-orm/pg-core";
 
 export const gameTable = pgTable("games", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
@@ -16,3 +23,11 @@ export const events = pgTable("events", {
   description: varchar({ length: 255 }).notNull(),
 });
 
+export const workshops = pgTable("workshops", {
+  id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  name: varchar({ length: 255 }).notNull(),
+  description: varchar({ length: 255 }).notNull(),
+  price: decimal().notNull(),
+  isPublished: boolean().default(true),
+  datetime: timestamp().notNull(),
+});

@@ -16,6 +16,8 @@ export default function Header() {
           <Link href={"/products-client-version"} className="text-background hover:text-foreground transition-colors">Products-Client</Link>
           <Link href={"/events/new"} className="text-background hover:text-foreground transition-colors">Create event</Link>
           <Link href={"/events"} className="text-background hover:text-foreground transition-colors">Events</Link>
+          <Link href={"/login"} className="text-background hover:text-foreground transition-colors">Sign in</Link>
+          <Link href={"/profile"} className="text-background hover:text-foreground transition-colors">Profile</Link>
         </div>
         <ThemeToggle />
       </nav>
