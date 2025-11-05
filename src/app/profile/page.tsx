@@ -14,6 +14,7 @@ const ProfilePage = async () => {
         alt="avatar"
         unoptimized
       />
+      <p>Google ID:{session.user.googleId}</p>
     </div>
   );
 };
