@@ -73,6 +73,18 @@ export default function Header() {
           >
             Profile
           </Link>
+          <Link
+            href={"/todos/new"}
+            className="text-background hover:text-foreground transition-colors"
+          >
+            Add todo
+          </Link>
+          <Link
+            href={"/todos"}
+            className="text-background hover:text-foreground transition-colors"
+          >
+            Todos
+          </Link>
           <GoogleSignIn />
         </div>
         <ThemeToggle />
