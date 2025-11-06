@@ -1,7 +1,7 @@
 import ChangeTodoStatusBtn from "@/components/change-todo-status-btn";
 import DeleteTodoBtn from "@/components/delete-todo-btn";
 import { db } from "@/db";
-import { todos, users } from "@/db/schema";
+import { todos } from "@/db/schema";
 import { authOptions } from "@/lib/auth/auth-options";
 import { asc, eq } from "drizzle-orm";
 import { getServerSession } from "next-auth";
