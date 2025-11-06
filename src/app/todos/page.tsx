@@ -21,14 +21,11 @@ const TodosPage = async () => {
   if (!session || !session.user.email) {
     throw Error("Unauthorized");
   }
-  const user = await db.query.users.findFirst({
-    where: eq(users.email, session.user.email!),
-  });
 
-  if (!user) {
+  if (!session.user.id) {
     throw new Error("User not found");
   }
-  const personalTodos = await getTodosByUserId(user.id);
+  const personalTodos = await getTodosByUserId(session.user.id);
 
   return (
     <div>

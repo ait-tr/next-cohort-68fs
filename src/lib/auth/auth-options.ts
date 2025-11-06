@@ -29,6 +29,7 @@ export const authOptions = {
         });
         if (existing) {
           token.role = existing.role;
+          token.id = existing.id;
         }
       }
       return token;
@@ -43,6 +44,9 @@ export const authOptions = {
       }
       if (token.role) {
         session.user.role = token.role;
+      }
+      if (token.id) {
+        session.user.id = token.id;
       }
       return session;
     },
