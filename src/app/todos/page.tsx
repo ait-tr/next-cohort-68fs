@@ -18,7 +18,7 @@ async function getTodosByUserId(userId: number) {
 
 const TodosPage = async () => {
   const session = await getServerSession(authOptions);
-  if (!session || !session.user.email) {
+  if (!session) {
     throw Error("Unauthorized");
   }
 
